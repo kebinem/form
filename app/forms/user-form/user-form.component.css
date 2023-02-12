@@ -1,0 +1,150 @@
+form {
+  position: relative;
+  width: 430px;
+  height: 500px;
+  padding-top: 90px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: rgb(245, 245, 245);
+  box-shadow: 4px 4px 0px -2px rgba(3, 4, 4, 0.3);
+}
+
+.tape {
+  position: absolute;
+  top: 20px;
+  left: -15px;
+  background: rgb(206, 8, 8);
+  width: 80%;
+  height: 35px;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+  font-size: 23px;
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+}
+
+.tape::before,
+.tape::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+}
+
+.tape::before {
+  left: 0;
+  bottom: -15px;
+  border-right: 15px solid rgb(117, 3, 3);
+  border-bottom: 15px solid transparent;
+}
+
+.tape::after {
+  right: -35px;
+  border-left: 35px solid rgb(206, 8, 8);
+  border-bottom: 35px solid transparent;
+}
+
+.field {
+  display: flex;
+  width: 100%;
+  padding: 0 20px;
+  justify-content: space-between;
+}
+
+label {
+  width: 25%;
+  /* margin-left: 15px; */
+  font-weight: bold;
+  color: rgb(85, 83, 83);
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+
+input,
+textarea,
+select {
+  width: 70%;
+  border: 1px solid rgb(173, 173, 173);
+  border-radius: 5px;
+}
+
+input,
+select {
+  height: 27px;
+  display: flex;
+  align-items: center;
+}
+
+#name,
+#mail,
+#tel {
+  padding-left: 30px;
+  background-repeat: no-repeat;
+  background-position: 5px center;
+}
+
+#name {
+  background-image: url("img/person.png");
+}
+
+#mail {
+  background-image: url("img/mail.png");
+}
+
+#tel {
+  background-image: url("img/phone.png");
+  background-size: 22px;
+  background-position: 6px center;
+}
+
+textarea {
+  padding: 5px 5px;
+}
+
+.send {
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+}
+
+.captcha {
+  width: 304px;
+}
+
+button {
+  background: rgb(135, 135, 135);
+  background: linear-gradient(
+    0deg,
+    rgba(135, 135, 135, 0.5) 0%,
+    rgba(219, 219, 219, 0.5) 100%
+  );
+  border: 1px solid rgb(146, 146, 146);
+  height: 98%;
+  transition: 0.5s;
+  font-weight: bold;
+}
+
+button:enabled {
+  cursor: pointer;
+  background: rgb(105, 249, 97);
+  background: linear-gradient(
+    0deg,
+    rgba(105, 249, 97, 1) 0%,
+    rgba(243, 246, 243, 1) 100%
+  );
+  border: 1px solid rgb(160, 255, 147);
+  color: rgb(99, 109, 129);
+}
+
+button:active {
+  scale: 0.8;
+}
+
+.ng-invalid.ng-touched {
+  border-color: red;
+}

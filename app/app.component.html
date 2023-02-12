@@ -1,0 +1,4 @@
+<div class="container">
+  <app-user-form (send)="check($event)" *ngIf="!send"></app-user-form>
+  <app-data [data]="data" *ngIf="send"></app-data>
+</div>
